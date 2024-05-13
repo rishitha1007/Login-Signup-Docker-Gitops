@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-signup-docker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: login-signup-docker
+  template:
+    metadata:
+      labels:
+        app: login-signup-docker
+    spec:
+      containers:
+      - name: login-signup-docker-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
