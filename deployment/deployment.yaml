@@ -13,7 +13,7 @@ spec:
         app: login-signup-docker
     spec:
       containers:
-      - name: login-signup-docker-container
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+        - name: login-signup-docker-container
+          image: rishithamarri/login-signup-docker:development-95ed2c28aa1f17ef7dce412efa2a2625db4aa2db
+          ports:
+            - containerPort: 80
